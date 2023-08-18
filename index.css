@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Monoton&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bubblegum+Sans&family=Monoton&family=Tilt+Prism&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bubblegum+Sans&family=Monoton&family=Tilt+Prism&family=Ubuntu&family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bubblegum+Sans&family=Monoton&family=Pacifico&family=Tilt+Prism&family=Ubuntu&family=Vibur&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arvo', monospace;
+}
+
+body {
+    background-color: rgb(0 0 0 / 88%);
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$ Navbar $$$$$$$$$$$$$$$$$$$$ */
+
+.navbar-brand {
+    color: rgb(239, 21, 148);
+    font-family: 'Monoton', cursive;
+    font-size: xx-large;
+    margin-left: -10px;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 10px rgb(255, 0, 150), 0 0 20px rgb(255, 0, 150), 0 0 30px rgb(255, 0, 150);
+}
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar-blur {
+    background-color: rgba(27, 17, 17, 0.8);
+    /* Adjust the background color and opacity */
+    backdrop-filter: blur(10px);
+    /* Apply the blur effect */
+    font-size: 24px;
+}
+
+
+#header {
+    content: ' ';
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-link {
+    font-family: 'Tilt Prism', cursive;
+    color: blanchedalmond;
+    font-size: 20px;
+    transition: .3s;
+    transform: translateY(100px);
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    text-shadow: 0 0 10px rgb(255, 0, 150), 0 0 20px rgb(255, 0, 150), 0 0 30px rgb(255, 0, 150);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28239, 21, 148, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+/* #################################### Hero Section ############################# */
+
+.hero-content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-self: center;
+    background: url('./images/bg-3.jpg');
+}
+
+.main {
+    position: relative;
+    padding: 280px 0 220px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    object-fit: cover;
+}
+
+.bg-img {
+    background: url('./images/bg-3.jpg');
+    height: 95vh;
+    width: 100%;
+    filter: blur(8px);
+    -webkit-filter: blur(15px);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-text {
+    color: #ff00ff;
+    position: absolute;
+    top: 55%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 72%;
+    padding: 20px;
+}
+
+.bg-text h1 {
+    animation: wavy 2s ease infinite alternate;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    display: inline-flex;
+    margin-bottom: 30px;
+    /* Add animation for wavy effect */
+}
+
+.bg-text h2 {
+    font-family: 'Arvo', cursive;
+    display: inline-flex;
+    margin-left: 16px;
+}
+
+#hero-text {
+    font-family: 'Arvo', cursive;
+    display: inline-flex;
+    font-size: 16px;
+    width: 70%;
+    color: #ff00ff;
+}
+
+@keyframes neon-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-neon-text {
+    font-size: 36px;
+    color: rgb(255, 0, 150);
+    /* Neon pink color (adjust values as needed) */
+    text-shadow: 0 0 10px rgb(255, 0, 150), 0 0 20px rgb(255, 0, 150), 0 0 30px rgb(255, 0, 150);
+    animation: neon-blink 0.5s 2 infinite alternate;
+    animation-delay: 100ms;
+}
+
+.name {
+    font-family: 'Pacifico', cursive;
+    color: #ff00ff;
+    font-style: italic;
+    font-size: 80px;
+    margin-bottom: 60px;
+}
+
+.bitmoji {
+    width: 150px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: absolute;
+    bottom: 0;
+    /* Adjust the vertical position */
+    right: 0;
+    /* Adjust the horizontal position */
+    transform: translate(-50%, 0%);
+    z-index: 3;
+}
+
+.bitmoji img {
+    border: 2px solid #ff00ff;
+    border-radius: 50%;
+    height: 26em;
+}
+
+
+/* ****************************************** Hero section ends ********************************** */
+
+
+
+
+
+/* ######################################## About Section #################################### */
+#about {
+    /* border: 3px solid !important; */
+    padding: 15px;
+    margin: 26px;
+    color: aliceblue;
+}
+
+.abtme {
+    display: inline;
+    position: relative;
+    width: 37%;
+    font-size: 3em;
+    font-family: 'Arvo', monospace;
+    transition: .7s;
+    transform: translateY(0px);
+    opacity: 0;
+    animation: slideBottom .8s ease forwards;
+
+}
+
+.highlight {
+    color: #ff00ff;
+    font-family: 'Arvo', monospace;
+    /* Change this to your desired color */
+}
+
+.abtimg {
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(0, 50px);
+}
+
+.abtimg img {
+    border-radius: 50%;
+    border: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 10px #ff00ff, 0 0 30px #ff00ff;
+    /* height: 18em; */
+    /* width: 17em; */
+    filter: grayscale(1);
+}
+
+.abtimg img:hover {
+    transform: scale(1.05);
+    filter: initial;
+}
+
+.wavy-img {
+    animation: wavy 4s infinite;
+}
+
+@keyframes wavy {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+        /* Adjust the distance for the wavy effect */
+    }
+}
+
+#abt-text {
+    font-family: 'Arvo', monospace;
+    font-size: 18px;
+}
+
+
+.col {
+    flex: 1 0 0%;
+    display: flex;
+    padding: 4px;
+    border: solid;
+    justify-content: center;
+    font-size: large;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+#abt-button {
+    background-color: #ff00ff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    border: none;
+}
+
+#abt-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%% skill Section ##############################*/
+
+#skill {
+    background: transparent;
+    background-position: center;
+    margin: 10px 10px;
+    /* filter: brightness(0.5); */
+}
+
+.my-skill-half {
+    display: block;
+    position: relative;
+    color: aliceblue;
+    justify-content: center;
+    font-size: 3em;
+    font-family: 'Arvo', monospace;
+}
+
+.my-skill-full {
+    color: #ff00ff;
+    font-family: 'Arvo', monospace;
+    /* Change this to your desired color */
+}
+
+.pogo span {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pogo span a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pogo span img {
+    margin: 20px 38px;
+}
+
+.pogo span a::after {
+    content: "";
+    display: block;
+    width: 51%;
+    height: 4px;
+    background: white;
+    border-radius: 49%;
+    filter: blur(6px);
+    position: relative;
+    bottom: 11px;
+    z-index: -1;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%% Contact %%%%%%%%%%%%%%%%%%%%%%% */
+
+#contact {
+    color: #ff00ff;
+    margin: 0 90px;
+    margin-top: 30px;
+    padding: 0 10em;
+}
+
+.my-contact {
+    display: block;
+    position: relative;
+    color: aliceblue;
+    justify-content: center;
+    font-size: 3em;
+    font-family: 'Arvo', monospace;
+}
+
+.me {
+    color: #ff00ff;
+    font-family: 'Arvo', monospace;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+}
+
+#send-button {
+    display: flex;
+    justify-content: center;
+    background-color: #ff00ff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    border: none;
+}
+
+#send-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.hogo a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ff00ff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ff00ff;
+    text-decoration: none;
+    margin: 30px 15px 30px 6px;
+}
+
+.hogo a:hover {
+    background-color: #ff00ff;
+    color: rgb(0 0 0 / 88%);
+    /* Change icon color on hover */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    filter: brightness(0.8);
+}
+
+
+
+
+/* ############################ Extra ############################ */
+
+#extra {
+    margin-top: 30px;
+}
+
+.portfolio-nav {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-nav ul {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+    animation: slideRight 1s ease forwards;
+}
+
+.portfolio-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    color: aliceblue;
+    font-family: 'Arvo', monospace;
+}
+
+.portfolio-nav ul li:hover {
+    color: #ff00ff;
+}
+
+.portfolio-nav ul li.active {
+    color: antiquewhite;
+    text-decoration: underline;
+}
+
+.portfolio-nav ul li span {
+    padding: 15px 0;
+    border-bottom: 2px solid transparent;
+    font-family: 'Arvo', monospace;
+}
+
+.portfolio-nav ul li.current span {
+    margin-bottom: 2px solid white;
+}
+
+.grid-item figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-item figure img {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.grid-item figure:hover {
+    transform: all 0.4s ease-out;
+}
+
+.tab-img {
+    display: block;
+    margin: 4px 7px;
+}
+
+.tab.active {
+    background: blanchedalmond;
+}
+
+
+
+
+
+/* ###################### Footer ######################### */
+
+.footer {
+    margin-top: 10px;
+    background: #292629;
+}
+
+.footer.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blanchedalmond;
+}
+
+.footer-name {
+    color: #ff00ff;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.logo i:hover {
+    background-color: transparent;
+    color: #ff00ff;
+    /* Change icon color on hover */
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+
+
+
+/* ##################### Responsive ######################### */
+
+@media (max-width: 500px) {
+    #hero-text {
+        font-size: 13px;
+    }
+
+    .name {
+        font-size: 10px;
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        margin-top: 2px;
+    }
+
+    .hogo a {
+        width: 35px;
+        height: 35px;
+        margin: 10px 3px 5px 6px;
+        border: none;
+    }
+
+    .bg-text h2 {
+        font-size: 20px;
+        margin: 30px 0px 0 12px;
+    }
+
+    .bg-text h1 {
+        font-size: 43px;
+        margin: 0px 0px 21px 5px;
+    }
+
+    .abt-text {
+        font-size: 12px;
+    }
+
+    .bg-text {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        margin: 0;
+        font-size: x-large;
+    }
+}
+
+
+@media (max-width:950px) {
+    .bitmoji img {
+        height: 21em;
+    }
+
+    .bitmoji {
+        transform: translate(-27%, -20%);
+    }
+}
+
+@media (max-width:750px) {
+    .bitmoji img {
+        height: 16em;
+    }
+
+    .bitmoji {
+        transform: translate(18%, -45%);
+    }
+}
+
+@media (max-width:500px) {
+    .bitmoji img {
+        height: 14em;
+    }
+
+    .bitmoji {
+        bottom: 14em;
+        right: 14em;
+        transform: translate(64%, -57%);
+    }
+
+    .bg-text {
+        top: 60%;
+    }
+
+    #hero-text {
+        width: 84%;
+    }
+}
+
+@media (max-width: 380px) {
+    #hero-text {
+        font-size: 10px;
+        position: relative;
+        left: 15px;
+    }
+
+    .bg-text {
+        top: 64%;
+    }
+
+    .bg-text h2 {
+        font-size: 15px;
+        margin: 27px 2px -34px 25px;
+    }
+
+    .hogo a {
+        width: 25px;
+        height: 25px;
+        margin: 10px 3px 5px 25px;
+        border: none;
+    }
+
+    .abt-text {
+        font-size: 12px;
+    }
+
+    .tab-img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .grid-item figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact {
+        margin: 0 23px;
+        margin-top: 20px;
+    }
+
+    #extra {
+        margin-top: 20px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .bitmoji {
+        bottom: 13em;
+        right: 34px;
+        transform: translate(-50%, -50%);
+    }
+
+    .bitmoji img {
+        height: 11em;
+    }
+}
+
+@media (min-width:380px) and (max-width:450px) {
+    .bitmoji img {
+        bottom: 16em;
+        right: 10em;
+    }
+
+    .bg-text {
+        top: 63%;
+    }
+}
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+}
