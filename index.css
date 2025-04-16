@@ -77,7 +77,8 @@ body {
     display: flex;
     position: relative;
     align-items: center;
-    justify-self: center;
+    /* justify-self: center; */
+    background-color: #ff00ff;
     background: url('./images/bg-3.jpg');
 }
 
@@ -150,7 +151,7 @@ body {
     font-size: 36px;
     color: rgb(255, 0, 150);
     /* Neon pink color (adjust values as needed) */
-    text-shadow: 0 0 10px rgb(255, 0, 150), 0 0 20px rgb(255, 0, 150), 0 0 30px rgb(255, 0, 150);
+    text-shadow: 0 0 3px rgb(255, 0, 150), 0 0 15px rgb(255, 0, 150), 0 0 30px rgb(255, 0, 150);
     animation: neon-blink 0.5s 2 infinite alternate;
     animation-delay: 100ms;
 }
@@ -503,6 +504,7 @@ body {
 
 .footer {
     margin-top: 10px;
+    padding-bottom: 20px;
     background: #292629;
 }
 
